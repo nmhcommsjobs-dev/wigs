@@ -1,0 +1,129 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww18960\viewh15180\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 (function () \{\
+    function initSlider() \{\
+        const container = document.getElementById("my-slider-widget");\
+        if (!container) return;\
+\
+        container.innerHTML = `\
+            <style>\
+                #my-slider-widget * \{ box-sizing: border-box; \}\
+\
+                #my-slider-container \{\
+                    position: relative;\
+                    width: 100%;\
+                    height: 350px;\
+                    max-width: 800px;\
+                    margin: 0 auto;\
+                    overflow: hidden;\
+                    background: #000;\
+                \}\
+\
+                .myslide \{\
+                    position: absolute;\
+                    width: 100%;\
+                    height: 100%;\
+                    opacity: 0;\
+                    transition: opacity 1s ease-in-out;\
+                \}\
+\
+                .myslide img \{\
+                    width: 100%;\
+                    height: 100%;\
+                    object-fit: cover;\
+                \}\
+\
+                .myslide.active \{\
+                    opacity: 1;\
+                \}\
+\
+                /* Dots */\
+                #my-slider-dots \{\
+                    position: absolute;\
+                    bottom: 12px;\
+                    width: 100%;\
+                    text-align: center;\
+                \}\
+\
+                .mydot \{\
+                    display: inline-block;\
+                    width: 12px;\
+                    height: 12px;\
+                    margin: 0 4px;\
+                    background: rgba(255,255,255,0.6);\
+                    border-radius: 50%;\
+                    cursor: pointer;\
+                    transition: background 0.3s;\
+                \}\
+\
+                .mydot.active \{\
+                    background: #fff;\
+                \}\
+\
+                /* Mobile responsive */\
+                @media (max-width: 600px) \{\
+                    #my-slider-container \{\
+                        height: 250px;\
+                    \}\
+                \}\
+            </style>\
+\
+            <div id="my-slider-container">\
+                <div class="myslide active"><img src="https://picsum.photos/id/1015/1200/800"></div>\
+                <div class="myslide"><img src="https://picsum.photos/id/1025/1200/800"></div>\
+                <div class="myslide"><img src="https://picsum.photos/id/1035/1200/800"></div>\
+\
+                <div id="my-slider-dots">\
+                    <span class="mydot active"></span>\
+                    <span class="mydot"></span>\
+                    <span class="mydot"></span>\
+                </div>\
+            </div>\
+        `;\
+\
+        const slides = container.querySelectorAll(".myslide");\
+        const dots = container.querySelectorAll(".mydot");\
+        let current = 0;\
+        const total = slides.length;\
+\
+        function showSlide(index) \{\
+            slides.forEach((s, i) => s.classList.toggle("active", i === index));\
+            dots.forEach((d, i) => d.classList.toggle("active", i === index));\
+            current = index;\
+        \}\
+\
+        dots.forEach((dot, i) => \{\
+            dot.addEventListener("click", () => \{\
+                showSlide(i);\
+                resetAutoPlay();\
+            \});\
+        \});\
+\
+        // Autoplay\
+        let autoPlay = setInterval(() => \{\
+            let next = (current + 1) % total;\
+            showSlide(next);\
+        \}, 4000);\
+\
+        function resetAutoPlay() \{\
+            clearInterval(autoPlay);\
+            autoPlay = setInterval(() => \{\
+                let next = (current + 1) % total;\
+                showSlide(next);\
+            \}, 4000);\
+        \}\
+    \}\
+\
+    // Run when DOM ready\
+    if (document.readyState === "loading") \{\
+        document.addEventListener("DOMContentLoaded", initSlider);\
+    \} else \{\
+        initSlider();\
+    \}\
+\})();\
+}
