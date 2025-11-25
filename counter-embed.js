@@ -12,14 +12,15 @@
   var style = document.createElement('style');
   style.innerHTML =
     "@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');" +
-    "#nmh-counter-widget { font-family: 'Roboto', Arial, sans-serif; max-width: 900px; margin: 2rem auto; display: grid;" +
-    "grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; padding: 2rem;" +
-    "background: #fff; border-radius: 14px; box-shadow: 0 6px 24px rgba(126,45,64,0.12);" +
-    "border: 1.5px solid #7E2D40; }" +
-    ".nmh-counter-item { text-align: center; padding: 1.5rem 0.5rem; background: #f8f4f6; border-radius: 10px; box-shadow: 0 1px 8px rgba(126,45,64,0.07); }" +
-    ".nmh-counter-number { font-size: 2.2em; font-weight: 700; color: #7E2D40; margin-bottom: 0.5em; letter-spacing: 0.02em; line-height: 1.1; }" +
+    "#nmh-counter-widget { font-family: 'Roboto', Arial, sans-serif; max-width: 1200px; margin: 2rem auto; display: grid;" +
+    "grid-template-columns: repeat(5, 1fr); gap: 1.2rem; padding: 1.5rem;" +
+    "background: #d9cfd2; border-radius: 14px; box-shadow: 0 6px 24px rgba(126,45,64,0.12); }" +
+    ".nmh-counter-item { text-align: center; padding: 1rem 0.2rem; background: #f8f4f6; border-radius: 10px; box-shadow: 0 1px 8px rgba(126,45,64,0.07); width: 70%; margin: 0 auto; }" +
+    ".nmh-counter-number { font-size: 2em; font-weight: 700; color: #7E2D40; margin-bottom: 0.45em; letter-spacing: 0.02em; line-height: 1.1; }" +
     ".nmh-counter-label { font-size: 1em; color: #444; font-weight: 400; letter-spacing: 0.01em; }" +
-    "@media (max-width: 600px) { #nmh-counter-widget { grid-template-columns: 1fr; padding: 1rem; } }";
+    "@media (max-width: 1280px) { #nmh-counter-widget { max-width: 98vw; } }" +
+    "@media (max-width: 900px) { #nmh-counter-widget { grid-template-columns: repeat(2, 1fr); } }" + // 2 per row on tablet
+    "@media (max-width: 600px) { #nmh-counter-widget { grid-template-columns: 1fr; padding: 1rem; } .nmh-counter-item{width:95%;}}";
   document.head.appendChild(style);
 
   // ---- CREATES WIDGET ----
