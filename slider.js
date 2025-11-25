@@ -67,9 +67,9 @@
             </style>
 
             <div id="my-slider-container">
-                <div class="myslide active"><img src="https://picsum.photos/id/1015/1200/800"></div>
-                <div class="myslide"><img src="https://picsum.photos/id/1025/1200/800"></div>
-                <div class="myslide"><img src="https://picsum.photos/id/1035/1200/800"></div>
+                <div class="myslide active"><img src="https://nmhschoolorg.finalsite.com/fs/resource-manager/view/bccd8b69-f8d5-46e1-bb15-517bfb4ac1d9"></div>
+                <div class="myslide"><img src="https://nmhschoolorg.finalsite.com/fs/resource-manager/view/a227e1cf-5e0f-4c7c-9c12-11824a616acc"></div>
+                <div class="myslide"><img src="https://nmhschoolorg.finalsite.com/fs/resource-manager/view/9c0edfc6-b28a-4862-bc8e-03a695820dc9"></div>
 
                 <div id="my-slider-dots">
                     <span class="mydot active"></span>
