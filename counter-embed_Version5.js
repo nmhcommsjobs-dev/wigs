@@ -100,7 +100,7 @@
       var target = parseFloat(el.getAttribute('data-target'));
       var format = el.getAttribute('data-format');
       var suffix = el.getAttribute('data-suffix') || '';
-      animateCounter(el, target, suffix, format, 1200);
+      animateCounter(el, target, suffix, format, 3600);
     });
   }
 
