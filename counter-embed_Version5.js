@@ -19,14 +19,14 @@
       "gap: 1.2rem;" +
       "width: 100%;" +
       " }" +
-    ".nmh-counter-item { text-align: center; padding: 3rem 0.2rem; background: #7E2D40; border-radius: 30px; box-shadow: 0 1px 8px rgba(126,45,64,0.07);" +
+    ".nmh-counter-item { text-align: center; padding: 1rem 0.4rem; background: #7E2D40; border-radius: 50px; box-shadow: 0 1px 8px rgba(126,45,64,0.07);" +
       "display: flex; flex-direction: column; align-items: center; justify-content: center;" +
       " }" +
     ".nmh-counter-number { font-size: 2em; font-weight: 700; color: #fff; margin-bottom: 0.45em; letter-spacing: 0.02em; line-height: 1.1; }" +
     ".nmh-counter-label { font-size: 1em; color: #fff; font-weight: 400; letter-spacing: 0.01em; }" +
     "@media (max-width: 600px) {" +
       ".nmh-counter-grid { grid-template-columns: 1fr; gap:1rem;} " +
-      ".nmh-counter-item { width: 100%; }" +
+      ".nmh-counter-item { width: 90%; }" +
     "}";
   document.head.appendChild(style);
 
