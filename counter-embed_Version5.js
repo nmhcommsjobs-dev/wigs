@@ -17,7 +17,7 @@
       "display: grid;" +
       "grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));" +
       "gap: 1.2rem;" +
-      "width: 100%;" +
+      "width: 95%;" +
       " }" +
     ".nmh-counter-item { text-align: center; padding calc(2rem + 20px); background: #7E2D40; border-radius: 10px; box-shadow: 0 1px 8px rgba(126,45,64,0.07);" +
       "display: flex; flex-direction: column; align-items: center; justify-content: center;" +
